@@ -1,4 +1,5 @@
-import { createTheme } from "@mui/system";
+import { createTheme } from "@mui/material/styles";
+import { useMemo, useState, createContext } from "react";
 
 // color design tokens
 export const tokens = (mode) => ({
@@ -122,12 +123,13 @@ export const tokens = (mode) => ({
 // mui theme settings
 export const themeSettings = (mode) => {
   const colors = tokens(mode);
-  const mainWeight = 500;
   const darkWeight = 700;
+  const mainWeight = 500;
   const lightWeight = 100;
+  const lightGrey = "#fcfcfc";
 
-  return {
-    pallette: {
+  const theme = {
+    palette: {
       mode,
       ...(mode === "dark"
         ? {
@@ -142,8 +144,77 @@ export const themeSettings = (mode) => {
               main: colors.grey[mainWeight],
               light: colors.grey[lightWeight],
             },
+            background: {
+              default: colors.primary[mainWeight],
+            },
           }
-        : {}),
+        : {
+            primary: {
+              main: colors.primary[lightWeight],
+            },
+            secondary: {
+              main: colors.greenAccent[mainWeight],
+            },
+            neutral: {
+              dark: colors.grey[darkWeight],
+              main: colors.grey[mainWeight],
+              light: colors.grey[lightWeight],
+            },
+            background: {
+              default: lightGrey,
+            },
+          }),
+    },
+    typography: {
+      fontFamily: ["SourceSansPro-Regular", "serif"].join(", "),
+      fontSize: 12,
+      h1: {
+        fontFamily: ["SourceSansPro-Bold", "serif"].join(", "),
+        fontSize: 40,
+      },
+      h2: {
+        fontFamily: ["SourceSansPro-Bold", "serif"].join(", "),
+        fontSize: 32,
+      },
+      h3: {
+        fontFamily: ["SourceSansPro-Bold", "serif"].join(", "),
+        fontSize: 24,
+      },
+      h4: {
+        fontFamily: ["SourceSansPro-Bold", "serif"].join(", "),
+        fontSize: 20,
+      },
+      h5: {
+        fontFamily: ["SourceSansPro-Bold", "serif"].join(", "),
+        fontSize: 16,
+      },
+      h6: {
+        fontFamily: ["SourceSansPro-Bold", "serif"].join(", "),
+        fontSize: 14,
+      },
     },
   };
+
+  return theme;
+};
+
+// context for color mode
+export const ColorModeContext = createContext({
+  toggleColorMode: () => {},
+});
+
+export const useMode = () => {
+  const [mode, setMode] = useState("dark");
+
+  const colorMode = useMemo(
+    () => ({
+      toggleColorMode: () =>
+        setMode((prev) => (prev === "light" ? "dark" : "light")),
+    }),
+    []
+  );
+
+  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+
+  return [theme, colorMode];
 };
