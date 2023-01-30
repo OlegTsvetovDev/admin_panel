@@ -57,6 +57,7 @@ const Form = () => {
             <Box
               display="grid"
               gap="30px"
+              mt="30px"
               gridTemplateColumns="repeat(4, minmax(0, 1fr))"
               sx={{
                 "& > div": {
@@ -161,6 +162,9 @@ const Form = () => {
                 color="secondary"
                 variant="contained"
                 size="large"
+                sx={{
+                  fontWeight: "bold",
+                }}
               >
                 Create New User
               </Button>
