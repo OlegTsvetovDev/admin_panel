@@ -2,12 +2,12 @@ import React from "react";
 import { Box } from "@mui/material";
 import Header from "../../components/Header";
 
-const Bar = () => {
+const Line = () => {
   return (
     <Box m="20px">
-      <Header title="Bar" />
+      <Header title="Line" />
     </Box>
   );
 };
 
-export default Bar;
+export default Line;

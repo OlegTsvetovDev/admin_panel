@@ -2,12 +2,12 @@ import React from "react";
 import { Box } from "@mui/material";
 import Header from "../../components/Header";
 
-const Bar = () => {
+const Pie = () => {
   return (
     <Box m="20px">
-      <Header title="Bar" />
+      <Header title="Pie" />
     </Box>
   );
 };
 
-export default Bar;
+export default Pie;
