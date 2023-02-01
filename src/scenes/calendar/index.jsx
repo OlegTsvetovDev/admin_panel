@@ -49,9 +49,9 @@ const Calendar = () => {
   };
 
   return (
-    <Box m="20px">
+    <Box m="20px" display="flex" flexDirection="column" gap="20px">
       <Header title="CALENDAR" subtitle="Full calendar interactive page" />
-      <Box m="20px" display="flex" justifyContent="space-between">
+      <Box display="flex" justifyContent="space-between">
         <Box
           flex="1 1 20%"
           backgroundColor={colors.primary[400]}
