@@ -62,7 +62,7 @@ export const tokens = (mode) => ({
         },
       }
     : {
-        grey: {
+        gray: {
           100: "#141414",
           200: "#292929",
           300: "#3d3d3d",
