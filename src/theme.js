@@ -126,7 +126,7 @@ export const themeSettings = (mode) => {
   const darkWeight = 700;
   const mainWeight = 500;
   const lightWeight = 100;
-  const lightGrey = "#fcfcfc";
+  const lightGray = "#fcfcfc";
 
   const theme = {
     palette: {
@@ -161,7 +161,7 @@ export const themeSettings = (mode) => {
               light: colors.grey[lightWeight],
             },
             background: {
-              default: lightGrey,
+              default: lightGray,
             },
           }),
     },

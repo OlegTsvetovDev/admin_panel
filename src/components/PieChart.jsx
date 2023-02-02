@@ -8,33 +8,38 @@ import { mockPieData } from "../data/mockData";
 const PieChart = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const grey = colors.grey[100];
+  const gray = colors.grey[100];
   // https://nivo.rocks/guides/theming/ -> theme object
   const customTheme = {
     axis: {
       domain: {
         line: {
-          stroke: grey,
+          stroke: gray,
         },
       },
       legend: {
         text: {
-          fill: grey,
+          fill: gray,
         },
       },
       ticks: {
         line: {
-          stroke: grey,
+          stroke: gray,
           strokeWidth: 1,
         },
         text: {
-          fill: grey,
+          fill: gray,
         },
       },
     },
     legends: {
       text: {
-        fill: grey,
+        fill: gray,
+      },
+    },
+    tooltip: {
+      container: {
+        color: colors.primary[500],
       },
     },
   };
@@ -54,7 +59,7 @@ const PieChart = ({ isDashboard = false }) => {
         modifiers: [["darker", 0.2]],
       }}
       arcLinkLabelsSkipAngle={10}
-      arcLinkLabelsTextColor={grey}
+      arcLinkLabelsTextColor={gray}
       arcLinkLabelsThickness={2}
       arcLinkLabelsColor={{ from: "color" }}
       arcLabelsSkipAngle={10}

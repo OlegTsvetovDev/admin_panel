@@ -37,6 +37,11 @@ const BarChart = ({ isDashboard = false }) => {
         fill: grey,
       },
     },
+    tooltip: {
+      container: {
+        color: colors.primary[500],
+      },
+    },
   };
 
   return (
