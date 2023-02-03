@@ -8,7 +8,7 @@ import { mockPieData } from "../data/mockData";
 const PieChart = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const gray = colors.grey[100];
+  const gray = colors.gray[100];
   // https://nivo.rocks/guides/theming/ -> theme object
   const customTheme = {
     axis: {

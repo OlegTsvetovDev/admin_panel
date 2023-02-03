@@ -8,7 +8,7 @@ import { mockBarData } from "../data/mockData";
 const BarChart = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const grey = colors.grey[100];
+  const grey = colors.gray[100];
   // https://nivo.rocks/guides/theming/ -> theme object
   const customTheme = {
     axis: {

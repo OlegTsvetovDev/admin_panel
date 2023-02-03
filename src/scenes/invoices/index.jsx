@@ -74,7 +74,7 @@ const Invoices = () => {
             backgroundColor: colors.blueAccent[700],
           },
           "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
-            color: `${colors.grey[100]} !important`,
+            color: `${colors.gray[100]} !important`,
           },
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,

@@ -25,7 +25,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
   return (
     <MenuItem
       active={selected === title}
-      style={{ color: colors.grey[100] }}
+      style={{ color: colors.gray[100] }}
       onClick={() => setSelected(title)}
       icon={icon}
     >
@@ -69,7 +69,7 @@ const Sidebar = () => {
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
             style={{
               margin: "10px 0 20px 0",
-              color: colors.grey[100],
+              color: colors.gray[100],
             }}
           >
             {!isCollapsed && (
@@ -79,7 +79,7 @@ const Sidebar = () => {
                 alignItems="center"
                 ml="15px"
               >
-                <Typography variant="h3" color={colors.grey[100]}>
+                <Typography variant="h3" color={colors.gray[100]}>
                   Admin
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
@@ -107,7 +107,7 @@ const Sidebar = () => {
               <Box textAlign="center">
                 <Typography
                   variant="h2"
-                  color={colors.grey[100]}
+                  color={colors.gray[100]}
                   fontWeight="bold"
                   sx={{
                     m: "10px 0 0 0",
@@ -133,7 +133,7 @@ const Sidebar = () => {
             />
             <Typography
               variant="h6"
-              color={colors.grey[300]}
+              color={colors.gray[300]}
               sx={{
                 m: "15px 0 5px 20px",
               }}
@@ -164,7 +164,7 @@ const Sidebar = () => {
 
             <Typography
               variant="h6"
-              color={colors.grey[300]}
+              color={colors.gray[300]}
               sx={{
                 m: "15px 0 5px 20px",
               }}
@@ -195,7 +195,7 @@ const Sidebar = () => {
 
             <Typography
               variant="h6"
-              color={colors.grey[300]}
+              color={colors.gray[300]}
               sx={{
                 m: "15px 0 5px 20px",
               }}

@@ -80,7 +80,7 @@ const Team = () => {
               </>
             )}
             <Typography
-              color={colors.grey[100]}
+              color={colors.gray[100]}
               sx={{ ml: "5px" }}
             ></Typography>
           </Box>

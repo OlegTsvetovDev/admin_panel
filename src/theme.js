@@ -5,7 +5,7 @@ import { useMemo, useState, createContext } from "react";
 export const tokens = (mode) => ({
   ...(mode === "dark"
     ? {
-        grey: {
+        gray: {
           100: "#e0e0e0",
           200: "#c2c2c2",
           300: "#a3a3a3",
@@ -140,9 +140,9 @@ export const themeSettings = (mode) => {
               main: colors.greenAccent[mainWeight],
             },
             neutral: {
-              dark: colors.grey[darkWeight],
-              main: colors.grey[mainWeight],
-              light: colors.grey[lightWeight],
+              dark: colors.gray[darkWeight],
+              main: colors.gray[mainWeight],
+              light: colors.gray[lightWeight],
             },
             background: {
               default: colors.primary[mainWeight],
@@ -156,9 +156,9 @@ export const themeSettings = (mode) => {
               main: colors.greenAccent[mainWeight],
             },
             neutral: {
-              dark: colors.grey[darkWeight],
-              main: colors.grey[mainWeight],
-              light: colors.grey[lightWeight],
+              dark: colors.gray[darkWeight],
+              main: colors.gray[mainWeight],
+              light: colors.gray[lightWeight],
             },
             background: {
               default: lightGray,
